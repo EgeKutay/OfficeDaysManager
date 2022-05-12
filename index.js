@@ -1,6 +1,6 @@
 const fs = require("fs");
 //rows
-const swdayc = 3;
+const swdayc = 1;
 let employees = [
   { name: "İlknur KURBAN", swdaycount: swdayc, workingdays: [] },
   { name: "Gamze AKYOL", swdaycount: swdayc, workingdays: [] },
@@ -18,28 +18,34 @@ let maxpersonCount = Math.round(employees.length * 0.5);
 employees = employees.sort(() => Math.random() - 0.5);
 //columns
 let days = [
-  { day: "Monday", employeeCount: 6 },
-  { day: "Tuesday", employeeCount: 6 },
-  { day: "Wednesday", employeeCount: 6 },
-  { day: "Thursday", employeeCount: 6 },
-  { day: "Friday", employeeCount: 6 },
+  { day: "Monday", employeeCount: 3 },
+  { day: "Tuesday", employeeCount: 3 },
+  { day: "Wednesday", employeeCount: 3 },
+  { day: "Thursday", employeeCount: 3 },
+  { day: "Friday", employeeCount: 3 },
 ];
 let date = new Date();
 let daysIndex;
+let findIndex = 0;
 for (let i = 0; i < employees.length; i++) {
   let string1 = "";
   let workingdays = JSON.parse(JSON.stringify(days));
+
   for (let j = employees[i].swdaycount - 1; j >= 0; j--) {
     //shuffling the days array here
 
     workingdays = workingdays.sort(() => Math.random() - 0.5);
 
-    let findIndex = days.findIndex((object) => {
-      return object.day === workingdays[workingdays.length - 1].day;
+    findIndex = days.findIndex((object) => {
+      if (workingdays.length > 0) {
+        return object.day === workingdays[workingdays.length - 1].day;
+      } else return false;
     });
+
     employees[i].workingdays.push(workingdays[workingdays.length - 1].day);
     employees[i].swdaycount--;
     console.log("----");
+    console.log(findIndex);
     console.log(days[findIndex]);
     console.log(workingdays[workingdays.length - 1]);
     days[findIndex].employeeCount--;
@@ -49,5 +55,3 @@ for (let i = 0; i < employees.length; i++) {
     }
   }
 }
-console.log(employees);
-console.log(days);
