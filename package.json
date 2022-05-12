@@ -1,0 +1,30 @@
+{
+  "name": "officedaysmanager",
+  "version": "1.0.0",
+  "description": "A program that generates office days for employees for hybrid working models.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "office",
+    "office",
+    "days",
+    "manager",
+    "office",
+    "days",
+    "autogenerate",
+    "office",
+    "days"
+  ],
+  "author": "yurusenege@gmail.com",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EgeKutay/OfficeDaysManager.git"
+  },
+  "bugs": {
+    "url": "https://github.com/EgeKutay/OfficeDaysManager/issues"
+  },
+  "homepage": "https://github.com/EgeKutay/OfficeDaysManager#readme"
+}
