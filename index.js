@@ -1,10 +1,30 @@
 const fs = require("fs");
 //rows
-const swdayc = 6;
+const swdayc = 3;
 let employees = [
-  { name: "İlknur KURBAN", swdaycount: 3, comingdays: [] },
-  { name: "Gamze AKYOL", swdaycount: swdayc, comingdays: [] },
-  { name: "Uğur CAN", swdaycount: swdayc, comingdays: [] },
+  { name: "ONUR ERDEN", swdaycount: 1, swdays: [] },
+  { name: "UYGAR ZUBARİ", swdaycount: 2, swdays: [] },
+  { name: "ÖZGÜR SELMANOĞLU", swdaycount: 1, swdays: [] },
+  { name: "MENGÜÇ HALİL", swdaycount: 1, swdays: [] },
+  { name: "İLKNUR KURBAN", swdaycount: 3, swdays: [] },
+  { name: "VOLKAN BALIKÇI", swdaycount: 3, swdays: [] },
+  { name: "TAHA ERKAN", swdaycount: 3, swdays: [] },
+  { name: "ÖZGÜ TÜRKMEN", swdaycount: 3, swdays: [] },
+  { name: "ENDER YURDAKOÇ", swdaycount: 3, swdays: [] },
+  
+  { name: "NİLDEN TUTALAR", swdaycount: 3, swdays: [] },
+  { name: "UĞUR CAN", swdaycount: 3, swdays: [] },
+  { name: "ZAFER GÜLER", swdaycount: 3, swdays: [] },
+  { name: "CAN UĞURLU", swdaycount: 3, swdays: [] },
+  { name: "ALİ EMRE OK", swdaycount: 3, swdays: [] },
+  { name: "GÜRKAN GÜNEY", swdaycount: 3, swdays: [] },
+  { name: "ÖZGÜR SALGINCI", swdaycount: 3, swdays: [] },
+  { name: "GAMZE AKYOL", swdaycount: 3, swdays: [] },
+  { name: "EGE KUTAY YÜRÜŞEN", swdaycount: 1, swdays: [] },
+
+
+
+
 
   
 ];
@@ -18,17 +38,21 @@ for(let emp in employees){
 employees = employees.sort(() => Math.random() - 0.5);
 //columns
 let days = [
-  { day: "Monday", employeeCount:1 },
-  { day: "Tuesday", employeeCount: 1 },
-  { day: "Wednesday", employeeCount: 1 },
-  { day: "Thursday", employeeCount: 1 },
-  { day: "Friday", employeeCount: 3 },
+  { day: "Monday", employeeCount:11 },
+  { day: "Tuesday", employeeCount: 11 },
+  { day: "Wednesday", employeeCount: 11 },
+  { day: "Thursday", employeeCount: 11 },
+  { day: "Friday", employeeCount:10  },
 ];
 let totalEmpCount=0
 for(let day in days){
     totalEmpCount += days[day].employeeCount
 }
-
+if(totalWorkDays>totalEmpCount){
+    console.log("Error total work days of employees cannot be larger than Total employee count in the week"
+    )
+   
+}
 let date = new Date();
 let daysIndex;
 let findIndex = 0;
@@ -57,7 +81,7 @@ for (let i = 0; i < employees.length; i++) {
   
 }
     
-    employees[i].comingdays.push(availabledays[index].day);
+    employees[i].swdays.push(availabledays[index].day);
     
     employees[i].swdaycount--
     
@@ -72,11 +96,6 @@ for (let i = 0; i < employees.length; i++) {
     if (days[findIndex].employeeCount === 0) {
         days.splice(findIndex, 1);
       }
-    
-    
-   console.log("---------")
-   console.log(employees)
-   console.log(availabledays)
   }
 }
 console.log(employees)
