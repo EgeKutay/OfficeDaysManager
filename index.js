@@ -1,4 +1,5 @@
 const fs = require("fs");
+const {Parser}=require('json2csv')
 //rows
 const swdayc = 3;
 let employees = [
@@ -11,7 +12,7 @@ let employees = [
   { name: "TAHA ERKAN", swdaycount: 3, swdays: [] },
   { name: "ÖZGÜ TÜRKMEN", swdaycount: 3, swdays: [] },
   { name: "ENDER YURDAKOÇ", swdaycount: 3, swdays: [] },
-  
+
   { name: "NİLDEN TUTALAR", swdaycount: 3, swdays: [] },
   { name: "UĞUR CAN", swdaycount: 3, swdays: [] },
   { name: "ZAFER GÜLER", swdaycount: 3, swdays: [] },

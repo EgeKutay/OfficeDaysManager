@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/EgeKutay/OfficeDaysManager/issues"
   },
-  "homepage": "https://github.com/EgeKutay/OfficeDaysManager#readme"
+  "homepage": "https://github.com/EgeKutay/OfficeDaysManager#readme",
+  "dependencies": {
+    "json2csv": "^5.0.7"
+  }
 }
