@@ -1,0 +1,29 @@
+{
+  "employees": [
+    { "name": "ONUR ERDEN", "swdaycount": 1, "swdays": [] },
+    { "name": "UYGAR ZUBARİ", "swdaycount": 2, "swdays": [] },
+    { "name": "ÖZGÜR SELMANOĞLU", "swdaycount": 1, "swdays": [] },
+    { "name": "MENGÜÇ HALİL", "swdaycount": 1, "swdays": [] },
+    { "name": "İLKNUR KURBAN", "swdaycount": 3, "swdays": [] },
+    { "name": "VOLKAN BALIKÇI", "swdaycount": 3, "swdays": [] },
+    { "name": "TAHA ERKAN", "swdaycount": 3, "swdays": [] },
+    { "name": "ÖZGÜ TÜRKMEN", "swdaycount": 3, "swdays": [] },
+    { "name": "ENDER YURDAKOÇ", "swdaycount": 3, "swdays": [] },
+    { "name": "NİLDEN TUTALAR", "swdaycount": 3, "swdays": [] },
+    { "name": "UĞUR CAN", "swdaycount": 3, "swdays": [] },
+    { "name": "ZAFER GÜLER", "swdaycount": 3, "swdays": [] },
+    { "name": "CAN UĞURLU", "swdaycount": 3, "swdays": [] },
+    { "name": "ALİ EMRE OK", "swdaycount": 3, "swdays": [] },
+    { "name": "GÜRKAN GÜNEY", "swdaycount": 3, "swdays": [] },
+    { "name": "ÖZGÜR SALGINCI", "swdaycount": 3, "swdays": [] },
+    { "name": "GAMZE AKYOL", "swdaycount": 3, "swdays": [] },
+    { "name": "EGE KUTAY YÜRÜŞEN", "swdaycount": 1, "swdays": [] }
+  ],
+  "days": [
+    { "day": "Monday", "employeeCount": 11 },
+    { "day": "Tuesday", "employeeCount": 11 },
+    { "day": "Wednesday", "employeeCount": 11 },
+    { "day": "Thursday", "employeeCount": 11 },
+    { "day": "Friday", "employeeCount": 10 }
+  ]
+}
