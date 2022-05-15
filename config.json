@@ -1,29 +1,29 @@
 {
   "employees": [
-    { "name": "ONUR ERDEN", "swdaycount": 1, "swdays": [] },
-    { "name": "UYGAR ZUBARİ", "swdaycount": 2, "swdays": [] },
-    { "name": "ÖZGÜR SELMANOĞLU", "swdaycount": 1, "swdays": [] },
-    { "name": "MENGÜÇ HALİL", "swdaycount": 1, "swdays": [] },
-    { "name": "İLKNUR KURBAN", "swdaycount": 3, "swdays": [] },
-    { "name": "VOLKAN BALIKÇI", "swdaycount": 3, "swdays": [] },
-    { "name": "TAHA ERKAN", "swdaycount": 3, "swdays": [] },
-    { "name": "ÖZGÜ TÜRKMEN", "swdaycount": 3, "swdays": [] },
-    { "name": "ENDER YURDAKOÇ", "swdaycount": 3, "swdays": [] },
-    { "name": "NİLDEN TUTALAR", "swdaycount": 3, "swdays": [] },
-    { "name": "UĞUR CAN", "swdaycount": 3, "swdays": [] },
-    { "name": "ZAFER GÜLER", "swdaycount": 3, "swdays": [] },
-    { "name": "CAN UĞURLU", "swdaycount": 3, "swdays": [] },
-    { "name": "ALİ EMRE OK", "swdaycount": 3, "swdays": [] },
-    { "name": "GÜRKAN GÜNEY", "swdaycount": 3, "swdays": [] },
-    { "name": "ÖZGÜR SALGINCI", "swdaycount": 3, "swdays": [] },
-    { "name": "GAMZE AKYOL", "swdaycount": 3, "swdays": [] },
-    { "name": "EGE KUTAY YÜRÜŞEN", "swdaycount": 1, "swdays": [] }
+    { "name": "ONUR ERDEN", "nwdaycount": 1, "nwdays": [] },
+    { "name": "UYGAR ZUBARI", "nwdaycount": 2, "nwdays": [] },
+    { "name": "OZGUR SELMANOGLU", "nwdaycount": 1, "nwdays": [] },
+    { "name": "MENGUÇ HALIL", "nwdaycount": 1, "nwdays": [] },
+    { "name": "ILKNUR KURBAN", "nwdaycount": 3, "nwdays": [] },
+    { "name": "VOLKAN BALIKCI", "nwdaycount": 3, "nwdays": [] },
+    { "name": "TAHA ERKAN", "nwdaycount": 3, "nwdays": [] },
+    { "name": "OZGU TURKMEN", "nwdaycount": 3, "nwdays": [] },
+    { "name": "ENDER YURDAKOC", "nwdaycount": 3, "nwdays": [] },
+    { "name": "NILDEN TUTALAR", "nwdaycount": 3, "nwdays": [] },
+    { "name": "UGUR CAN", "nwdaycount": 3, "nwdays": [] },
+    { "name": "ZAFER GULER", "nwdaycount": 3, "nwdays": [] },
+    { "name": "CAN UGURLU", "nwdaycount": 3, "nwdays": [] },
+    { "name": "ALI EMRE OK", "nwdaycount": 3, "nwdays": [] },
+    { "name": "GURKAN GUNEY", "nwdaycount": 3, "nwdays": [] },
+    { "name": "OZGUR SALGINCI", "nwdaycount": 3, "nwdays": [] },
+    { "name": "GAMZE AKYOL", "nwdaycount": 3, "nwdays": [] },
+    { "name": "EGE KUTAY YURUSEN", "nwdaycount": 1, "nwdays": [] }
   ],
   "days": [
-    { "day": "Monday", "employeeCount": 11 },
-    { "day": "Tuesday", "employeeCount": 11 },
-    { "day": "Wednesday", "employeeCount": 11 },
+    { "day": "Monday", "employeeCount": 8 },
+    { "day": "Tuesday", "employeeCount": 9 },
+    { "day": "Wednesday", "employeeCount": 10 },
     { "day": "Thursday", "employeeCount": 11 },
-    { "day": "Friday", "employeeCount": 10 }
+    { "day": "Friday", "employeeCount": 12 }
   ]
 }

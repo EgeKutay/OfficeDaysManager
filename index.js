@@ -5,14 +5,13 @@ const { Parser } = require("json2csv");
 const data = require("./config.json");
 const swdayc = 3;
 let employees = data["employees"];
-
 let totalWorkDays = 0;
 for (let emp in employees) {
-  totalWorkDays += employees[emp].swdaycount;
+  totalWorkDays += employees[emp].nwdaycount;
 }
 //max person allowed in office
-let a = Math.random();
-employees = employees.sort(() => a - 0.5);
+
+employees = employees.sort(() => Math.random() - 0.5);
 console.log(employees);
 //columns
 let days = data["days"];
@@ -33,8 +32,9 @@ try {
   for (let i = 0; i < employees.length; i++) {
     //availabledays variable will be the variable that the remaining days for the  employee since he/she can't work twice in same day
     let availabledays = JSON.parse(JSON.stringify(days));
-    //if the same day count is bigger than ... after certain iteration
-    for (let j = employees[i].swdaycount - 1; j >= 0; j--) {
+
+    let isBalanced = false;
+    for (let j = employees[i].nwdaycount - 1; j >= 0; j--) {
       /*
     shuffle order of days so everytime you pop it you get work on random day
     attend a random day to the employee
@@ -49,15 +49,17 @@ try {
 
       for (let k = 0; k < availabledays.length; k++) {
         if (
-          availabledays[k].employeeCount > availabledays[index].employeeCount
+          availabledays[k].employeeCount > availabledays[index].employeeCount &&
+          !isBalanced
         ) {
           index = k;
+          isBalanced = true;
         }
       }
 
-      employees[i].swdays.push(availabledays[index].day);
+      employees[i].nwdays.push(availabledays[index].day);
 
-      employees[i].swdaycount--;
+      employees[i].nwdaycount--;
 
       findIndex = days.findIndex((object) => {
         return object.day === availabledays[index].day;
@@ -75,12 +77,22 @@ try {
 } catch (err) {
   console.error(err);
 }
+employees = employees.sort(function (a, b) {
+  if (a.name[0] < b.name[0]) {
+    return -1;
+  }
+  if (a.name[0] > b.name[0]) {
+    return 1;
+  }
+  return 0;
+});
+console.log(employees);
 const opts = { employees };
 try {
   const parser = new Parser(opts);
   const csv = parser.parse(JSON.parse(JSON.stringify(employees)));
 
-  fs.writeFileSync(`${date.getTime()}.csv`, csv, "utf16le", function (err) {
+  fs.writeFileSync(`../${date.getTime()}.csv`, csv, "utf16le", function (err) {
     if (err) {
       console.log("An error occured while writing JSON object to File");
 
