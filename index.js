@@ -1,4 +1,6 @@
 const fs = require("fs");
+
+const { Parser } = require("json2csv");
 //rows
 const data = require("./config.json");
 const swdayc = 3;
@@ -27,13 +29,13 @@ if (totalWorkDays > totalEmpCount) {
 let date = new Date();
 let daysIndex;
 let findIndex = 0;
-
-for (let i = 0; i < employees.length; i++) {
-  //availabledays variable will be the variable that the remaining days for the  employee since he/she can't work twice in same day
-  let availabledays = JSON.parse(JSON.stringify(days));
-  //if the same day count is bigger than ... after certain iteration
-  for (let j = employees[i].swdaycount - 1; j >= 0; j--) {
-    /*
+try {
+  for (let i = 0; i < employees.length; i++) {
+    //availabledays variable will be the variable that the remaining days for the  employee since he/she can't work twice in same day
+    let availabledays = JSON.parse(JSON.stringify(days));
+    //if the same day count is bigger than ... after certain iteration
+    for (let j = employees[i].swdaycount - 1; j >= 0; j--) {
+      /*
     shuffle order of days so everytime you pop it you get work on random day
     attend a random day to the employee
     reduce the employee's working day count
@@ -42,31 +44,50 @@ for (let i = 0; i < employees.length; i++) {
     remove the viability of day from viable days list (FOR THAT EMPLOYEE).
     check if the day is full of employees if so, REMOVE THE founded day permanently from viabledays array  
     */
-    availabledays = availabledays.sort(() => Math.random() - 0.5);
-    let index = 0;
+      availabledays = availabledays.sort(() => Math.random() - 0.5);
+      let index = 0;
 
-    for (let k = 0; k < availabledays.length; k++) {
-      if (availabledays[k].employeeCount > availabledays[index].employeeCount) {
-        index = k;
+      for (let k = 0; k < availabledays.length; k++) {
+        if (
+          availabledays[k].employeeCount > availabledays[index].employeeCount
+        ) {
+          index = k;
+        }
+      }
+
+      employees[i].swdays.push(availabledays[index].day);
+
+      employees[i].swdaycount--;
+
+      findIndex = days.findIndex((object) => {
+        return object.day === availabledays[index].day;
+      });
+
+      days[findIndex].employeeCount--;
+
+      availabledays.splice(index, 1);
+
+      if (days[findIndex].employeeCount === 0) {
+        days.splice(findIndex, 1);
       }
     }
-
-    employees[i].swdays.push(availabledays[index].day);
-
-    employees[i].swdaycount--;
-
-    findIndex = days.findIndex((object) => {
-      return object.day === availabledays[index].day;
-    });
-
-    days[findIndex].employeeCount--;
-
-    availabledays.splice(index, 1);
-
-    if (days[findIndex].employeeCount === 0) {
-      days.splice(findIndex, 1);
-    }
   }
+} catch (err) {
+  console.error(err);
 }
-console.log(employees);
-console.log(days);
+const opts = { employees };
+try {
+  const parser = new Parser(opts);
+  const csv = parser.parse(JSON.parse(JSON.stringify(employees)));
+
+  fs.writeFileSync(`${date.getTime()}.csv`, csv, "utf16le", function (err) {
+    if (err) {
+      console.log("An error occured while writing JSON object to File");
+
+      return console.log(err);
+    }
+    console.log("JSON file has been saved.");
+  });
+} catch (err) {
+  console.error(err);
+}
