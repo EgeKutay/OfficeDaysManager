@@ -5,6 +5,7 @@ const {
   transforms: { unwind, flatten },
 } = require("json2csv");
 
+
 //rows
 const data = require("./config.json");
 const swdayc = 3;
@@ -16,10 +17,10 @@ for (let emp in employees) {
 //max person allowed in office
 
 employees = employees.sort(() => Math.random() - 0.5);
-console.log(employees);
+
 //columns
 let days = data["days"];
-console.log(JSON.stringify(days));
+
 let totalEmpCount = 0;
 for (let day in days) {
   totalEmpCount += days[day].employeeCount;
@@ -29,7 +30,7 @@ if (totalWorkDays > totalEmpCount) {
     "Error total work days of employees cannot be larger than Total employee count in the week"
   );
 }
-let date = new Date();
+
 let daysIndex;
 let findIndex = 0;
 /*
@@ -41,6 +42,7 @@ let findIndex = 0;
     remove the viability of day from viable days list (FOR THAT EMPLOYEE).
     check if the day is full of employees if so, REMOVE THE founded day permanently from viable days array  
     */
+   
 try {
   for (let i = 0; i < employees.length; i++) {
     let availabledays = JSON.parse(JSON.stringify(days));
@@ -78,6 +80,9 @@ try {
 } catch (err) {
   console.error(err);
 }
+
+   
+//Sort the employee array in alphabetical order.
 employees = employees.sort(function (a, b) {
   if (a.name[0] + a.name[1] < b.name[0] + b.name[1]) {
     return -1;
@@ -87,15 +92,66 @@ employees = employees.sort(function (a, b) {
   }
   return 0;
 });
-console.log(employees);
-const opts = { employees };
+let officeDayArr=[];
+
+
+for(let i=0;i<employees.length;i++){
+  let employeeObj={Name:'',Monday:'',Tuesday:'',Wednesday:'',Thursday:'',Friday:''}
+for(let j=0;j<employees[i].nwdays.length;j++){
+ 
+    //USE FOR LOOP FOR employeOBJ TO FILL EVERYTHING!!!!
+    employeeObj['Name']=employees[i].name
+for(let k=1;k<Object.keys(employeeObj).length;k++){
+if(Object.keys(employeeObj)[k].toLowerCase()===employees[i].nwdays[j].toLowerCase()){
+  employeeObj[`${Object.keys(employeeObj)[k]}`]='NW'
+}
+else if( employeeObj[`${Object.keys(employeeObj)[k]}`]==''){
+
+  employeeObj[`${Object.keys(employeeObj)[k]}`]='SW'
+}
+
+}
+  
+}
+officeDayArr.push(employeeObj)
+}
+console.log(officeDayArr)
+/*
+for(let i=1;i<Object.keys(employeeObj).length;i++){
+ console.log("----")
+  for(let j=0;j<employees[0].nwdays.length;j++){
+    let findIndex = employees[0].nwdays.findIndex((object) => {
+      return object.toLocaleLowerCase() === Object.keys(employeeObj)[i].toLocaleLowerCase()
+    });
+console.log(findIndex)
+   
+ if(Object.keys(employeeObj)[i].toLocaleLowerCase()==employees[0].nwdays[findIndex].toLocaleLowerCase()){
+employeeObj['Name']=employees[0].name
+employeeObj[`${Object.keys(employeeObj)[i]}`]='NW'
+ }
+ else{
+  employeeObj[`${Object.keys(employeeObj)[i]}`]='SW'
+ }
+  }
+}
+*/
+//console.log(employeeObj)
+
+
+
+currentdate = new Date();
+var oneJan = new Date(currentdate.getFullYear(),0,1);
+var numberOfDays = Math.floor((currentdate - oneJan) / (24 * 60 * 60 * 1000));
+var result = Math.ceil(( currentdate.getDay() + 1 + numberOfDays) / 7);
+
+
 try {
   const parser = new Parser({
-    transforms: [unwind({ days, blankOut: true }), flatten("__")],
+    transforms: [unwind({officeDayArr, blankOut: true }), flatten("__")],
   });
-  const csv = parser.parse(JSON.parse(JSON.stringify(employees)));
+  const csv = parser.parse(JSON.parse(JSON.stringify(officeDayArr)));
 
-  fs.writeFileSync(`../${date.getTime()}.csv`, csv, "utf16le", function (err) {
+  fs.writeFileSync(`SF_Working_Plan${result}_Plan.csv`, csv, "utf16le", function (err) {
     if (err) {
       console.log("An error occured while writing JSON object to File");
 
