@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/EgeKutay/OfficeDaysManager#readme",
   "dependencies": {
+    "exceljs": "^4.3.0",
     "js-base64": "^3.7.2",
     "json2csv": "^5.0.7",
     "turkish-char-encoding": "^0.0.5"

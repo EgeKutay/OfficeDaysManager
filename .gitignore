@@ -1,5 +1,6 @@
 .DS_Store
 node_modules
+SF_Working_Plans
 /dist
 # local env files
 # Log files
