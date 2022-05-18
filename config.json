@@ -20,10 +20,10 @@
 {"id": 16000287,"name": "EGE KUTAY YURUSEN","nwdaycount": 4,"nwdays": [],"offdays": []}
   ],
   "days": [
-{ "day": "Monday", "employeeCount": 12 },
-{ "day": "Tuesday", "employeeCount": 12 },
-{ "day": "Wednesday", "employeeCount": 12 },
-{ "day": "Thursday", "employeeCount": 12 },
-{ "day": "Friday", "employeeCount": 12 }
+{ "day": "Monday", "employeeCount": 15},
+{ "day": "Tuesday", "employeeCount": 0 },
+{ "day": "Wednesday", "employeeCount": 15 },
+{ "day": "Thursday", "employeeCount": 15 },
+{ "day": "Friday", "employeeCount": 15 }
   ]
 }
