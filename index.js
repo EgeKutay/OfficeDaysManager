@@ -83,9 +83,8 @@ fgColor:{argb:'F0F0FF'},
     worksheet.getCell(`H${i+2}`).fill= {
       type: 'pattern',
   pattern:'solid',
-  fgColor:{argb:'FFEECC'},
-      
-    };;
+  fgColor:{argb:'FFFF66'}, 
+    };
 
 }
 
@@ -93,12 +92,11 @@ worksheet.getCell(`A${officeDayArr.length+2}`).value="Normal Working Count:"
 
 for(let i=67;i<72;i++){
   let letter=String.fromCharCode(i);
-  worksheet.getCell(`${letter}${officeDayArr.length+2}`).value={ formula: `=COUNTIF(${letter}${2}:${letter}${officeDayArr.length+1},"NW")` };
+  worksheet.getCell(`${letter}${officeDayArr.length+2}`).value={ formula: `=COUNTIF(${letter}${2}:${letter}${officeDayArr.length+1},"NW")`};
   worksheet.getCell(`${letter}${officeDayArr.length+2}`).fill= {
     type: 'pattern',
 pattern:'solid',
-fgColor:{argb:'FFFF66'},
-    
+fgColor:{argb:'FFEECC'},
   };
   worksheet.getCell(`${letter}${officeDayArr.length+2}`).border = {
     top: {style:'thin'},

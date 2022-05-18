@@ -1,29 +1,29 @@
 {
   "employees": [
-    {"id":20015,"name": "ONUR ERDEN", "nwdaycount": 4, "nwdays": [] },
-    {"id":20016,"name": "UYGAR ZUBARI", "nwdaycount": 3, "nwdays": [] },
-    {"id":20017, "name": "OZGUR SELMANOGLU", "nwdaycount": 4, "nwdays": [] },
-    {"id":20018, "name": "MENGUÇ HALIL", "nwdaycount": 4, "nwdays": [] },
-    {"id":20019, "name": "ILKNUR KURBAN", "nwdaycount": 2, "nwdays": [] },
-    {"id":20020,"name": "VOLKAN BALIKCI", "nwdaycount": 2, "nwdays": [] },
-    {"id":20021, "name": "TAHA ERKAN", "nwdaycount": 2, "nwdays": [] },
-    {"id":20022,"name": "OZGU TURKMEN", "nwdaycount": 2, "nwdays": [] },
-    {"id":20023, "name": "ENDER YURDAKOC", "nwdaycount": 2, "nwdays": [] },
-    {"id":20024, "name": "NILDEN TUTALAR", "nwdaycount": 2, "nwdays": [] },
-    {"id":20027, "name": "UGUR CAN", "nwdaycount": 2, "nwdays": [] },
-    {"id":20029, "name": "ZAFER GULER", "nwdaycount": 2, "nwdays": [] },
-    {"id":20030, "name": "CAN UGURLU", "nwdaycount": 2, "nwdays": [] },
-    {"id":20031, "name": "ALI EMRE OK", "nwdaycount": 2, "nwdays": [] },
-    {"id":20035, "name": "GURKAN GUNEY", "nwdaycount": 2, "nwdays": [] },
-    {"id":20033, "name": "OZGUR SALGINCI", "nwdaycount": 2, "nwdays": [] },
-    {"id":20062, "name": "GAMZE AKYOL", "nwdaycount": 2, "nwdays": [] },
-    {"id":16000287, "name": "EGE KUTAY YURUSEN", "nwdaycount": 5, "nwdays": [] }
+    {"id":20015,"name": "ONUR ERDEN", "nwdaycount": 3, "nwdays": [],"offdays":["Monday", "Tuesday"] },
+    {"id":20016,"name": "UYGAR ZUBARI", "nwdaycount": 2, "nwdays": [],"offdays":[] },
+    {"id":20017, "name": "OZGUR SELMANOGLU", "nwdaycount": 3, "nwdays": [],"offdays":[] },
+    {"id":20018, "name": "MENGUÇ HALIL", "nwdaycount": 3, "nwdays": [],"offdays":[] },
+    {"id":20019, "name": "ILKNUR KURBAN", "nwdaycount": 2, "nwdays": [],"offdays":[] },
+    {"id":20020,"name": "VOLKAN BALIKCI", "nwdaycount": 3, "nwdays": [],"offdays":[] },
+    {"id":20021, "name": "TAHA ERKAN", "nwdaycount": 2, "nwdays": [],"offdays":[] },
+    {"id":20022,"name": "OZGU TURKMEN", "nwdaycount": 2, "nwdays": [],"offdays":[] },
+    {"id":20023, "name": "ENDER YURDAKOC", "nwdaycount": 2, "nwdays": [],"offdays":[] },
+    {"id":20024, "name": "NILDEN TUTALAR", "nwdaycount": 2, "nwdays": [],"offdays":[] },
+    {"id":20027, "name": "UGUR CAN", "nwdaycount": 2, "nwdays": [],"offdays":[] },
+    {"id":20029, "name": "ZAFER GULER", "nwdaycount": 2, "nwdays": [],"offdays":[] },
+    {"id":20030, "name": "CAN UGURLU", "nwdaycount": 2, "nwdays": [],"offdays":[] },
+    {"id":20031, "name": "ALI EMRE OK", "nwdaycount": 2, "nwdays": [],"offdays":[] },
+    {"id":20035, "name": "GURKAN GUNEY", "nwdaycount": 2, "nwdays": [],"offdays":[] },
+    {"id":20047, "name": "OZGUR SALGINCI", "nwdaycount": 2, "nwdays": [],"offdays":[] },
+    {"id":20062, "name": "GAMZE AKYOL", "nwdaycount": 2, "nwdays": [],"offdays":[] },
+    {"id":16000287, "name": "EGE KUTAY YURUSEN", "nwdaycount": 4, "nwdays": [],"offdays":[] }
   ],
   "days": [
-    { "day": "Monday", "employeeCount": 9 },
-    { "day": "Tuesday", "employeeCount": 10 },
-    { "day": "Wednesday", "employeeCount": 9 },
-    { "day": "Thursday", "employeeCount": 15 },
-    { "day": "Friday", "employeeCount": 9 }
+    { "day": "Monday", "employeeCount": 12 },
+    { "day": "Tuesday", "employeeCount": 12 },
+    { "day": "Wednesday", "employeeCount": 12 },
+    { "day": "Thursday", "employeeCount":12 },
+    { "day": "Friday", "employeeCount":12 }
   ]
 }
