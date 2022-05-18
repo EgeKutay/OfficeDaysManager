@@ -1,12 +1,12 @@
 {
   "employees": [
-    {"id":20015,"name": "ONUR ERDEN", "nwdaycount": 3, "nwdays": ["Monday","Thursday"] },
-    {"id":20016,"name": "UYGAR ZUBARI", "nwdaycount": 2, "nwdays": ["Thursday"] },
-    {"id":20017, "name": "OZGUR SELMANOGLU", "nwdaycount": 1, "nwdays": ["Thursday"] },
-    {"id":20018, "name": "MENGUÇ HALIL", "nwdaycount": 1, "nwdays": ["Thursday"] },
-    {"id":20019, "name": "ILKNUR KURBAN", "nwdaycount": 1, "nwdays": ["Thursday"] },
-    {"id":20020,"name": "VOLKAN BALIKCI", "nwdaycount": 1, "nwdays": ["Thursday"] },
-    {"id":20021, "name": "TAHA ERKAN", "nwdaycount": 1, "nwdays": ["Friday"] },
+    {"id":20015,"name": "ONUR ERDEN", "nwdaycount": 4, "nwdays": [] },
+    {"id":20016,"name": "UYGAR ZUBARI", "nwdaycount": 3, "nwdays": [] },
+    {"id":20017, "name": "OZGUR SELMANOGLU", "nwdaycount": 4, "nwdays": [] },
+    {"id":20018, "name": "MENGUÇ HALIL", "nwdaycount": 4, "nwdays": [] },
+    {"id":20019, "name": "ILKNUR KURBAN", "nwdaycount": 2, "nwdays": [] },
+    {"id":20020,"name": "VOLKAN BALIKCI", "nwdaycount": 2, "nwdays": [] },
+    {"id":20021, "name": "TAHA ERKAN", "nwdaycount": 2, "nwdays": [] },
     {"id":20022,"name": "OZGU TURKMEN", "nwdaycount": 2, "nwdays": [] },
     {"id":20023, "name": "ENDER YURDAKOC", "nwdaycount": 2, "nwdays": [] },
     {"id":20024, "name": "NILDEN TUTALAR", "nwdaycount": 2, "nwdays": [] },
@@ -17,13 +17,13 @@
     {"id":20035, "name": "GURKAN GUNEY", "nwdaycount": 2, "nwdays": [] },
     {"id":20033, "name": "OZGUR SALGINCI", "nwdaycount": 2, "nwdays": [] },
     {"id":20062, "name": "GAMZE AKYOL", "nwdaycount": 2, "nwdays": [] },
-    {"id":16000287, "name": "EGE KUTAY YURUSEN", "nwdaycount": 1, "nwdays": [] }
+    {"id":16000287, "name": "EGE KUTAY YURUSEN", "nwdaycount": 5, "nwdays": [] }
   ],
   "days": [
     { "day": "Monday", "employeeCount": 9 },
-    { "day": "Tuesday", "employeeCount": 0 },
+    { "day": "Tuesday", "employeeCount": 10 },
     { "day": "Wednesday", "employeeCount": 9 },
-    { "day": "Thursday", "employeeCount": 6 },
+    { "day": "Thursday", "employeeCount": 15 },
     { "day": "Friday", "employeeCount": 9 }
   ]
 }
