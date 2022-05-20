@@ -1,6 +1,6 @@
 {
   "employees": [
-    {"id":20015,"name": "ONUR ERDEN", "nwdaycount": 3, "nwdays": [],"offdays":["Monday", "Tuesday"] },
+    {"id":20015,"name": "ONUR ERDEN", "nwdaycount": 3, "nwdays": [],"offdays":[] },
     {"id":20016,"name": "UYGAR ZUBARI", "nwdaycount": 2, "nwdays": [],"offdays":[] },
     {"id":20017, "name": "OZGUR SELMANOGLU", "nwdaycount": 3, "nwdays": [],"offdays":[] },
     {"id":20018, "name": "MENGUÇ HALIL", "nwdaycount": 3, "nwdays": [],"offdays":[] },
