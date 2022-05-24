@@ -11,16 +11,16 @@ let currentdate = new Date();
 let oneJan = new Date(currentdate.getFullYear(),0,1);
 let numberOfDays = Math.floor((currentdate - oneJan) / (24 * 60 * 60 * 1000));
 
-let result = Math.ceil(( currentdate.getDay() + 1 + numberOfDays) / 7);
+let result = Math.ceil(( currentdate.getDay() + 7 + numberOfDays) / 7);
 function dates(current) {
   var week= new Array(); 
   // Starting Monday not Sunday
-  current.setDate((current.getDate() - current.getDay() +8));
+  current.setDate((current.getDate() - current.getDay() ));
   for (var i = 0; i < 7; i++) {
       week.push(
           new Date(current)
       ); 
-      current.setDate(current.getDate() +1);
+      current.setDate(current.getDate() );
   }
   return week; 
 }
@@ -93,10 +93,10 @@ worksheet.getCell(`H${officeDayArr.length+2}`).border = setBorder('thin')
 
 
 worksheet.getCell('K4').value="NW"
-worksheet.getCell('K4').fill=setSolidColor('FFCF00')
+worksheet.getCell('K4').fill=setSolidColor('F0F0FF')
 worksheet.getCell(`K4`).border =setBorder('thin')
 worksheet.getCell('L4').value="Normal Working(Company)"
-worksheet.getCell('L4').fill=setSolidColor('FFCF00')
+worksheet.getCell('L4').fill=setSolidColor('F0F0FF')
 worksheet.getCell(`L4`).border =setBorder('thin')
 
 worksheet.getCell('K5').value="AL"
@@ -157,7 +157,7 @@ function setSolidColor(color){
     
   };
 }
-console.log(worksheet.columns)
+
 
 
 
