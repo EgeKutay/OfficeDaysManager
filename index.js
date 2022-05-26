@@ -157,8 +157,5 @@ function setSolidColor(color){
     
   };
 }
-console.log(worksheet.columns)
-
-
 
 workbook.xlsx.writeFile(`SF_Working_Plan${result}_Plan.xlsx`);
