@@ -1,12 +1,12 @@
 {
   "employees": [
-{"id": 20001,"name": "GOKHAN BINGOL","nwdaycount": 5,"nwdays": [],"offdays":{"aldays":[],"hrdays":[],"uldays":[],"swdays":["Tuesday","Wednesday"],"mldays":[]}},
+{"id": 20001,"name": "GOKHAN BINGOL","nwdaycount": 3,"nwdays": [],"offdays":{"aldays":[],"hrdays":[],"uldays":[],"swdays":["Tuesday","Wednesday"],"mldays":[]}},
 {"id": 20015,"name": "ONUR ERDEN","nwdaycount": 3,"nwdays": ["Monday","Thursday","Friday"],"offdays":{"aldays":[],"hrdays":[],"uldays":[],"swdays":["Tuesday","Wednesday"],"mldays":[]}},
 {"id": 20016,"name":"UYGAR ZUBARI","nwdaycount": 2,"nwdays": ["Thursday","Friday"],"offdays":{"aldays":[],"hrdays":[],"uldays":[],"swdays":["Tuesday","Wednesday"],"mldays":[]}},
-{"id": 20017,"name": "OZGUR SELMANOGLU","nwdaycount": 2,"nwdays": ["Monday"],"offdays":{"aldays":[],"hrdays":[],"uldays":[],"swdays":["Tuesday","Wednesday"],"mldays":[]}},
+{"id": 20017,"name": "OZGUR SELMANOGLU","nwdaycount": 3,"nwdays": ["Monday"],"offdays":{"aldays":[],"hrdays":[],"uldays":[],"swdays":["Tuesday","Wednesday"],"mldays":[]}},
 {"id": 20018,"name": "MENGUÇ HALIL","nwdaycount": 3, "nwdays": ["Monday","Thursday","Friday"], "offdays":{"aldays":[],"hrdays":[],"uldays":[],"swdays":["Tuesday","Wednesday"],"mldays":[]}},
 {"id": 20019,"name": "ILKNUR KURBAN","nwdaycount": 2,"nwdays": [],"offdays":{"aldays":[],"hrdays":[],"uldays":[],"swdays":["Tuesday","Wednesday"],"mldays":[]}},
-{"id": 20020,"name": "VOLKAN BALIKCI","nwdaycount": 3,"nwdays": [],"offdays":{"aldays":[],"hrdays":[],"uldays":[],"swdays":["Tuesday","Wednesday"],"mldays":[]}},
+{"id": 20020,"name": "VOLKAN BALIKCI","nwdaycount": 2,"nwdays": [],"offdays":{"aldays":[],"hrdays":[],"uldays":[],"swdays":["Tuesday","Wednesday"],"mldays":[]}},
 {"id": 20021,"name": "TAHA ERKAN","nwdaycount": 2,"nwdays": [],"offdays":{"aldays":[],"hrdays":[],"uldays":[],"swdays":["Tuesday","Wednesday"],"mldays":[]}},
 {"id": 20022,"name": "OZGU TURKMEN","nwdaycount": 2,"nwdays": ["Thursday"],"offdays":{"aldays":[],"hrdays":[],"uldays":[],"swdays":["Tuesday","Wednesday"],"mldays":[]}},
 {"id": 20023,"name": "ENDER YURDAKOC","nwdaycount": 2,"nwdays": [],"offdays":{"aldays":[],"hrdays":[],"uldays":[],"swdays":["Tuesday","Wednesday"],"mldays":[]}},
@@ -21,7 +21,7 @@
 {"id": 16000287,"name": "EGE KUTAY YURUSEN","nwdaycount": 2,"nwdays": [],"offdays":{"aldays":[],"hrdays":[],"uldays":[],"swdays":["Tuesday","Wednesday"],"mldays":[]}}
   ],
   "days": [
-{ "day": "Monday", "employeeCount": 15},
+{ "day": "Monday", "employeeCount": 13},
 { "day": "Tuesday", "employeeCount": 15 },
 { "day": "Wednesday", "employeeCount": 15},
 { "day": "Thursday", "employeeCount": 15},
