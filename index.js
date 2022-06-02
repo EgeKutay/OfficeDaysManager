@@ -157,11 +157,5 @@ function setSolidColor(color){
     
   };
 }
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 10426
 
 workbook.xlsx.writeFile(`SF_Working_Plan${result}_Plan.xlsx`);
