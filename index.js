@@ -44,15 +44,15 @@ for(let i=0;i<officeDayArr.length;i++){
    row=worksheet.addRow(officeDayArr[i]);
    row.eachCell(function(cell,colNumber){
     
-    if(worksheet.getCell(cell.address).value=='NW'){
+if(worksheet.getCell(cell.address).value=='NW'){
       worksheet.getCell(cell.address).border = setBorder('thin')
         worksheet.getCell(cell.address).fill = setSolidColor('F0F0FF')
-    }
-    else if(worksheet.getCell(cell.address).value=='SW'){
+}
+else if(worksheet.getCell(cell.address).value=='SW'){
       worksheet.getCell(cell.address).border = setBorder('thin')
       worksheet.getCell(cell.address).fill = setSolidColor('FFF0F0')
-  }
-  else if(worksheet.getCell(cell.address).value=='PH'){
+}
+else if(worksheet.getCell(cell.address).value=='PH'){
     worksheet.getCell(cell.address).border = setBorder('thin')
     worksheet.getCell(cell.address).fill = setSolidColor('FFDD00')
 }
@@ -72,6 +72,11 @@ else if(worksheet.getCell(cell.address).value=='UL'){
   worksheet.getCell(cell.address).border = setBorder('thin')
   worksheet.getCell(cell.address).fill = setSolidColor('6666FF')
 }
+else if(worksheet.getCell(cell.address).value=='UL'){
+  worksheet.getCell(cell.address).border = setBorder('thin')
+  worksheet.getCell(cell.address).fill = setSolidColor('6666FF')
+}
+
     });
     worksheet.getCell(`H${i+2}`).value={ formula: `=COUNTIF(C${i+2}:G${i+2},"NW")` };
     worksheet.getCell(`H${i+2}`).border = setBorder('thin')
